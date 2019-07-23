@@ -1,0 +1,54 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : Abdul Abdi 
+ Email       : aabdi39@myseneca.ca
+ Student #   : 146779186
+ Course Code : OOP345
+ Section     : SCC 
+ Date        : June 1st, 2019 
+ Workshop    : Workshop 3 - home
+ ============================================================================
+ */
+/*
+ ============================================================================
+  Reflection on what I have learned from doing this workshop 
+ ============================================================================
+*/
+
+
+What I learned from doing this workshop: 
+In doing this workshop I was able to gain more comfort with working with template classes especially with how template classes work in the context of inheritance and base/derived classes. I was able to see in practise that it effectively works the same way as it works normally with classes, however less overloads are needed and specializations only need to be made for cases with unique logic. This was best shown with the sum function in my SummableLVPair class which only needed to define one sum function and only required a specialization to the sum for the one case that required unique logic. 
+
+
+Question 1: 
+The sum function required specialization for the case of a string/string pair because the logic defined in the sum function would not work for that pair. The string class needed to add a space in order for the function to work as expected/how we wanted it to work. By specializing the sum function for the string/string pair we were apply to code for this difference in logic. 
+
+Question 2: 
+The initalValue class variable needed to be specialized because the program needed to have different initial values for certain pairs. In this case we needed the string/int pair to start at 0 whereas the string/string pair needed to start as an empty string in order for the class to work as we expected. 
+
+Question 3: 
+The class variables are defined outside of the class definition because the class variables need to be initialized only once which is accomplished by defining and initializing them outside of the class definition.
+
+
+
+Quiz 3 Reflection: 
+
+Question 1: Properties of a Composition Relationship (Part-Of relationship) : Part = member and object = class 
+
+            1. The part is part of the object
+            2. The part can only belong to one object at a time 
+            3. The part's existence is managed by the object. 
+            4. The part does not know about the object. 
+
+Question 2: Properties of an Aggregation Relationship: Part = member and object = class 
+
+            1. The part is part of the object
+            2. The part can belong to more than one object at a time 
+            3. The part's existence is not managed by the object. 
+            4. The part does not know about the object.
+
+
+
+
+   

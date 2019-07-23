@@ -1,0 +1,34 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : Abdul Abdi 
+ Email       : aabdi39@myseneca.ca
+Student #   : 146779186
+ Course Code : OOP345
+ Section     : SCC 
+ Date        : June 17th, 2019 
+ Workshop    : Workshop 5 - home
+ ============================================================================
+ */
+/*
+ ============================================================================
+  Reflection on what I have learned from doing this workshop 
+ ============================================================================
+*/
+
+
+What I learned from doing this workshop: 
+In doing this workshop I was able to to familiarize myself with error handling in c++ as well as creating function objects and using lambda functions. With error handling I was able to use the throw, try and catch keywords to capture an error with and then using the try keyword test a block of code and use catch to deal with any errors/exceptions that were thrown. I was able to create a function object which allowed me to overload the function call operator while simultaneously holding a state ( in this case the HST tax rate). I was also able to use a lamda function to create an anonymous function that I can put inside another function which saved the time of having to create and call a separate function I only needed to use once. Lastly, I was able to further become comfortable with template classes by now being able to manage resources within my template class. 
+
+
+Question 1: 
+The difference between implementations of a functor and a lambda function is that a functor is created from a constructor that is called when the function is called elsewhere and because of the overload on the function operator the logic that was coded inside the overload is also executed. Whereas with a lambda expression it is anonymous function and the logic is presented at the same as the function is being passed to another function. In my code for my functor Taxable, I created a Taxable class in a separate header file that contained the functor and the logic was executed when I created the Taxable function object. However, with my lambda expression I was able to pass the lambda function with its logic at the same time. 
+
+Question 2: 
+I throw an exception when the array size that was passed to by KVList class was non positive and this also triggered a normal exit of the program.
+
+I throw an exception when the [] overload was trying to access an element in that array that was out of bounds. 
+
+I throw an exception when the display tried to present a grade that was less than 0. 
+
+The program triggered a normal exit if less than 2 parameters where passed.

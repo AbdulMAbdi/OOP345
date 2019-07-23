@@ -1,0 +1,48 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : Abdul Abdi 
+ Email       : aabdi39@myseneca.ca
+ Student #   : 146779186
+ Course Code : OOP345
+ Section     : SCC 
+ Date        : July 9th, 2019 
+ Workshop    : Workshop 7 - home
+ ============================================================================
+ */
+/*
+ ============================================================================
+  Reflection on what I have learned from doing this workshop 
+ ============================================================================
+*/
+
+
+What I learned from doing this workshop: 
+In doing this workshop I was able to gain more experience coding a template class by coding a more robust template class that accomplishes more complex tasks. I was also able to learn how to make use of the Standard Template Library (STL) algorithm library by using various methods from the library to manipulate the vector containers I used. The problems given in the workshop required me to search through the library to find methods to help me code solutions and even though I didn’t use all of them, I was able to gain an understanding of several methods included in the library. Lastly, this workshop allowed me to get some practice with lambda functions resulting in a better grasp of the concept. 
+
+
+Question 1: 
+In this workshop the vector container was used because it is the closest to an array and the most efficient way of storing data in contiguous memory. Since the code design does not require adding and removing data from both ends of the set, the vector container was the best and most efficient choice. 
+
+Question 2: 
+I used std::accumulate in my getSum(bool first) const function which allowed me to easily find the sums in my data pairs. 
+
+I used std::sort in my getMedian() const function which allowed me to sort the y data in my data pairs to find the median. 
+
+Question 3: 
+I used a lambda function in the call to the std::accumulate method in my getSum(bool first) const function so I can calculate x sums and y sums and store them in a new datasums pair. The lambda function was necessary because std::pair does not have a + operator overload. 
+
+Question 4: 
+Once I was able to get past the initial barrier of understanding how the methods included in the library worked, using the STL library was relatively easy and allowed me to code solutions that were more compact and readable. For example, once I was able to find and understand the std::sort function that made coding a solution to finding the median rather simple. The std::accumulate function also allowed to me create a sum function that was able to return first and second element sums in a pair.
+
+
+
+Quiz 7 Reflection
+
+1. Complee the following statement that allocates memory statically for a raw pointer without using auto
+
+   Const char* str = "This is OOP345" ; 
+
+
+
+

@@ -1,0 +1,33 @@
+// Workshop <Workshop 1 >
+// Name: <Abdul Abdi>
+// Student #: <146779186>
+// Course: OOP345 Summer 2019
+// File: <reflect.txt>
+
+	In doing this workshop I was able to better understand the difference between external and internal linkage. External linkage refers to a variable that is accessible across translation units ( translation unit refers to the unit created in pre-processing which combines header files and their corresponding implantation files as well as replacing macros with their literal representation) whereas internal linkage refers to a variable that is only accessible within its own scope or translation unit. By default any global variable has external linkage unless it is constant variable with const qualifier in which case you would have to explicitly state that the variable has external linkage with extern keyword. I could see this in my own program with the global constant variable defined in w1.cpp INITIAL; because it was a const int I needed to use the keyword extern to give it external linkage and by doing so I was able to access the variable INITIAL in my String module (again using the extern keyword but this time I did not need to initialize the variable). I was able to see internal linkage implemented in my program with the variable currItem in my String module; by using the static keyword I was able to explicitly give the variable internal linkage but also was able to ensure that the variable stayed active throughout the length of the program and not just through the life of its scope (function scope in this case). 
+
+	While working on this workshop I was able to observe the execution effect of the given process module and the process() function it contained. This function works first by receiving the address to unmodifiable c-style string and passes that to the one argument constructor in our String class and constructs a String object. In the next line our insertion operator overload is called and this overload takes the ostream on the left hand side (in this case cout) and first inserts into it a local variable of int type called currItem followed by ": " and then finally calls the display function from the String object on the right hand side ( this function outputs the member variable string). 
+
+	In the at home portion of this workshop the instructions required the string module to now manage resources and accept a c-style string of any length. To accomplish a first changed by String class to hold a char* pointer instead of a fixed length c-style string. Next I created a private member function that would return nothing and receive the address of an unmodifiable c-style string. This function uses the library function strlen() to determine the length of the c-style string received and then uses that length to dynamically allocate space to a c-style string of the same length and our char* pointer will hold the address to this memory. Next the function uses the strncpy() library funciton  to copy the c-style string received to the the memory that was allocated. Since my String class now manages resources, I created a destructor to ensure all dynamically allocated memory is released at the end of an object’s life. I also included a copy constructor and copy assignment operator to ensure that resources are being deep copied not just the pointer being shallow copied. 
+
+	Finally while doing this workshop I also learned more about the main() function and how it can receive parameters from command line. The main function can receive two parameters the first an int which is the number of arguments received in command line and the second parameters an array of strings that represent the arguments typed into command line.
+
+
+
+Quiz 1 Reflection: 
+
+2. True - An attempt to dereference a pointer that that holds the value nullptr will cause a run-time error.
+
+3. A nullptr is better than a wild pointer because a run-time error will occur when an attemp to deference a nullptr is made whereas with a wild pointer the behaviour is undefined making debugging more difficult. 
+
+4. The ouput of the program is 
+rvalue 20 
+lvalue 20
+
+5. The keyword static declares a class variable. 
+
+6. One similarity between unions and structures is that they both have a default access level of public. One difference is that a union uses the same address to store member variables and a structure has unique addresses to store member variables.
+
+
+
+   

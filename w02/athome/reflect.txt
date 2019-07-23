@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : Abdul Abdi 
+ Email       : aabdi39@myseneca.ca
+ Student #   : 146779186
+ Course Code : OOP345
+ Section     : SCC 
+ Date        : May 20, 2019 
+ Workshop    : Workshop 2 - home
+ ============================================================================
+ */
+/*
+ ============================================================================
+  Reflection on what I have learned from doing this workshop 
+ ============================================================================
+*/
+
+What I learned from doing this workshop: 
+
+In doing this workshop I was able to gain familiarity with some aspects of the <chrono> library. Specifically I was able to understand how std::chrono::time_point and std::chrono::duration objects worked and worked together. In my Timekeeper class I was able to declare two time_point objects and duration object as data members and with my start() and stop() member functions I was able to initialize both of my timepoint objects to the current time using thing timepoint object now() member function. Then my duration object was able to record the difference in the start and stop timepoint objects and using <duration_cast> I was able to manipulate the duration object to store the difference in seconds and a floating-point type. Using the <chrono> library in the way I have explained also allowed me to see tangibly the efficiency of the copy-constructor, copy assignment, move constructor and move assignment operator. 
+
+Question 1: 
+
+The reason for the difference between copy and move operations is that copy operations are dealing with copying or assigning one lvalue reference to another lvalue reference whereas move operations are moving or assigning a rvalue reference to a lvalue reference. This difference is the reason for the different implementations of copy operations and move operations. Since the copy operations are dealing with two lvalue references that the means the right operand that is being copied is in a persistent state and in order to maintain this in classes that have resources, deep copies must be made to ensure that both left and right operands are referencing unique addresses. However with move operations the right operand is a rvalue reference meaning that it is a temporary object that will be destroyed soon, so creating deep copies that reference new spaces in memory is not necessary and would be inefficient so we can just have the left operand reference the same address and then have the temporary object point to nullptr. For example in my Text class, an array of strings needs to be dynamically managed and in my copy operations, I need to dynamically allocate new memory to hold the array of strings I am going to copy over however in my move operators I just need to assign the currents object pointer to the same address as string pointer of the object being moved. 
+
+Question 2: 
+
+The difference in dynamically allocating addresses to object instead of objects themselves is that an address stored in a pointer can just be assigned to another to point to the same address whereas when dynamically allocating an object itself you must create new space for that object using the new keyword and then store that address in a pointer. This is shown in my code with the implementation of my Text class copy assignment operator and move assignment operator; in the copy assignment operator I need to allocate new space to hold the array of string objects I am deep copying over but in my move assignment operator where I just need to store the address of the array of string objects I am moving over, new memory allocation is not required. 
+
+
+Quiz 2 Reflection: 
+
+Question 5: What is the output of the following program? 
+
+Incorrect Answer: 3 6 10 15
+
+Correct Answer: 15
+
+
+
+   

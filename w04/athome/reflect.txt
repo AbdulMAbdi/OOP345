@@ -1,0 +1,29 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : Abdul Abdi 
+ Email       : aabdi39@myseneca.ca
+ Student #   : 146779186
+ Course Code : OOP345
+ Section     : SCC 
+ Date        : June 10th, 2019 
+ Workshop    : Workshop 4 - home
+ ============================================================================
+ */
+/*
+ ============================================================================
+  Reflection on what I have learned from doing this workshop 
+ ============================================================================
+*/
+
+
+What I learned from doing this workshop: 
+In doing this workshop I was able to learn and apply member functions of the String class such as the substr(), find() functions as well as the meaning of the npos static member constant variable in the String class. The substr() function allowed me to break apart a String object into a smaller string object and in my code used this function to break apart the string recieved in my Message class two argument constructor into the the 3 string objects I needed to store in my member variables. I used the find() function to locate at which index of the string object I needed to divide the string recieved using the end markers described in the workshop specifications. Finally I was able to use the npos constant as a way to determine if a position was found using the find() function (unsuccessful find() would return npos, the largest possible value for size_t).  
+
+
+Question 1: 
+The difference between implementations of a composition and aggregation is that a composition relationship requires the composer class to destroy and manage its component objects whereas in an aggregation the aggregator is not responsible for the creation or the destruction of its aggregate types. In the case of my code with my MessagePack class ( a composition relationship between MessagePack and Message) the MessagePack class was responsible for the creation and destruction of the array of Pointers to message objects as well as the creation and destruction of the induvial objects the pointers point to. However, in the aggregation relationship in the Notifications class the class was only responsible for the creation and destruction of the array of pointers to message objects not the induvial objects themselves. 
+
+Question 2: 
+The difference between the copy/move functions in a composition and aggregation is that the composer class is responsible for the destruction of its component objects whereas an aggregator is not responsible for the destruction of its aggregate types. In my code this is shown by the copy functions requiring the deletion of both the array of Pointers to message objects as well as the induvial objects the pointers point to, in my MessagePack class(composition). Also, the copy functions for my MessagePack class required the deep copying of the induvial objects the pointers point. With my aggregation (Notifications), in the copy functions the class was only required to delete the array of pointers to message objects. In the move functions for the MessagePack class deletion of both the array of Pointers to message objects as well as the induvial objects the pointers point was needed whereas in the Notifications class only the array of pointers to message objects was needed.
+

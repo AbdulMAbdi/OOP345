@@ -1,0 +1,58 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : Abdul Abdi 
+ Email       : aabdi39@myseneca.ca
+ Student #   : 146779186
+ Course Code : OOP345
+ Section     : SCC 
+ Date        : July 23rd, 2019 
+ Workshop    : Workshop 8 - home
+ ============================================================================
+ */
+/*
+ ============================================================================
+  Reflection on what I have learned from doing this workshop 
+ ============================================================================
+*/
+
+
+
+What I learned from doing this workshop: 
+In doing this workshop I was able to gain practice using smart pointers for the <memory> library. By using smart pointers, I was able to make my code more compact and avoid missing places where memory needed to be deallocated because the unique_ptr claims ownership of the object it points and therefore does the deallocation of the object itself. 
+
+
+Question 1: 
+The advantage of using a smart pointer is that due to RAII (Resource acquisition is initialization) the actual object the pointer is referencing is always deleted. This is useful because in comparison to a raw pointer where missing deallocation somewhere in your code or an exception being thrown can or will cause a memory leak, a smart pointer does not have this problem because it owns the object it points to and will destroy it before it goes out of scope and is destroyed itself. 
+ 
+Question 2: 
+When creating a raw pointer, I used the pointer notation to declare pointer to a product object and then initialized that pointer to point to a new Product object that was constructed. 
+
+When creating a smart pointer I used declared a std::unique_ptr object which was constructed passing a new Product object as a parameter. Because of this in the += overload that has a smart pointer as the second operand the declaration is represented by a reference to a unique_ptr object not a pointer to one.
+
+Quiz 8 reflection: 
+
+1. Name the two principal aspects of the performance of a program:
+Tasks and Communication 
+2. Write the statement that constructs a thread to execute the function named foo, which receives 3 as its only argument:
+std::thread t1(foo,3); 
+3 (1) What is the prototype for the member function that returns the unique identifier of a thread?
+std::thread::id get_id() const
+
+4 . What do a promise and a future have in common? 
+A shared state in which the promise will provide a value that the future is ready to access. 
+5 . The set_value() member function on a promise sets a value and makes it ready for a future.
+6 . A future retrieves a value through its get() member function.
+7 . Complete the following program to execute the function foo once on the master thread and once on a spawned thread:
+
+void foo(){ std::cout << “345\n\n”; }
+
+int main() {
+
+std::thread t1(foo); 
+
+foo(); 
+
+t1.join(); 
+
+}                                   

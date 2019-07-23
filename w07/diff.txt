@@ -1,0 +1,14 @@
+In line number 22 of your output:
+The output should be:
+  y sigma   =   2.5820
+                ^
+But your output is: 
+  y sigma   =    2.5820
+                ^
+
+Unmatched character details:
+The character in column 17 is supposed to be:
+  [2] ASCII code(50)
+but you printed
+  [Space] ASCII code(32)
+

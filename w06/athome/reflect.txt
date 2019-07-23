@@ -1,0 +1,72 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : Abdul Abdi 
+ Email       : aabdi39@myseneca.ca
+Student #   : 146779186
+ Course Code : OOP345
+ Section     : SCC 
+ Date        : July 9th, 2019 
+ Workshop    : Workshop 6 - home
+ ============================================================================
+ */
+/*
+ ============================================================================
+  Reflection on what I have learned from doing this workshop 
+ ============================================================================
+*/
+
+
+What I learned from doing this workshop: 
+In doing this workshop I was able to learn how to implement a vector container to store a set of pointers. By using a vector container I was able to more easily add, delete and grew the size of the set of pointers as opposed to using an array. Throughout doing this workshop I was also able to gain more experience in using enumerations and class variables in my class. In the classes I coded for this project I was able to use an enumeration to identify the tax status of an object and was able to store the according rates in a class variable. 
+
+
+Question 1: 
+In this workshop the vector container was used because it is the closest to an array making it more effecient than a deque container. Since are code design does not require adding and removing data from both ends of the set , the vector container was the best choice. 
+
+Question 2: 
+We did not need to worry about deallocation of memory in our code because the vector container has the ability to destroy the objects it contains after it leaves scope. 
+
+Question 3: 
+By using the range based for in our code we do not be concern about indices (i.e product[i]) and instead can just iterate over the whole range of the vector container by reference to the adress that the container holds. 
+
+
+Quiz 6 Reflection
+
+
+1. The algorithms category of the STL consists of the following three libraries: Containers, Iterators, Algorithms
+
+2. Complete the statement that creates a function object named foo by binding the function named add to the arguments 10 and 20:
+auto foo = std::bind(add, 10, 20); 
+ 
+3. The iterators of the standard template library divide into six categories. Name two of them: Input Iterator, Output Iterator
+ 
+4. The transform function templates of the STL perform programmer-specified operations on the elements of a sequential container. 
+
+5. Complete the statement that sums the elements of int array a and returns the result:
+      int result = std::accumulate ( a.begin() , a.end() , 0); 
+ 
+6. Write a program that reads the first 10 bytes from a binary file named file and displays them on standard output: 
+
+#include <iostream>
+#include 
+
+int main() {
+    
+
+     char str[11];
+     char* p = str;
+
+     std::ifstream f("file", std::ios::in|std::ios::binary); 
+
+     while(f)
+         f.read(p++, 1);
+     *--p = '\0';
+
+     std::cout << str << std::endl;
+}
+
+
+
+
+
